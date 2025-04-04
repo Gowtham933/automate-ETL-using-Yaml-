@@ -1,0 +1,10 @@
+etl:
+  extract:
+    source_type: "csv"  # options: csv, db
+    source_file: "/content/file.csv"  # path to your file
+  transform:
+    filter_column: "age"  # column to filter by
+    filter_value: 30  # filter rows where age is greater than this
+  load:
+    destination_type: "csv"  # options: csv, db
+    destination_file: "/content/output.csv"  # path to save output
